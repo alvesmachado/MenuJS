@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.treino {
+    padding: 24px;
+    text-align: center;
+}
+
+.treino > h1 {
+    color: blueviolet;
+    font-style: italic;
+}
+
+.treino > p {
+    color: rgb(57, 1, 109);
+    font-weight: bold;
+}
