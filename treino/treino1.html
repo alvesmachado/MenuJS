@@ -41,7 +41,14 @@
         </section>
     </main>
     <script>
-        window.alert("Prove que não é um robô e clique em 'OK'")
+        var nome = window.prompt("Qual seu nome?") // Abre a mensagem acima do navegador fazendo uma pergunta com um input
+        var nasc = window.prompt("Qual o seu ano de nascimento") 
+        nome.toUpperCase
+        window.alert(`Seu username atual é ${nome}${nasc}`) // '+' aqui é uma concatenação, mas o alert é uma mensagem com botão 'ok'
+        var n1 = Number(window.prompt("Digite um número")) // Number vale como Number.parseInt ou Number.parseFloat
+        var n2 = Number(window.prompt("Digite outro numero"))
+        var result = n1 + n2
+        window.alert(`${nome}${nasc}, a soma dos valores é ${String(result)}`) // number pode ser transformado em string também com o String(x).
     </script>
 </body>
 </html>
