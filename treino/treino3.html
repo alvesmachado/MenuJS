@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheet/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,1,0" />
+    <link rel="stylesheet" href="../stylesheet/styletreino.css">
+    <link rel="shortcut icon" href="../image/favicon.svg" type="image/x-icon">
+    <title>MenuJS | Treino 2</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="../index.html" class="material-symbols-outlined" title="MenuJS">code</a>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="../index.html" class="material-symbols-outlined" title="Página Inicial">home</a>
+                </li>
+                <li>
+                    <a href="../calculator.html" class="material-symbols-outlined" title="Página Inicial">calculate</a>
+                </li>
+                <li>
+                    <a href="../time.html" class="material-symbols-outlined" title="Projeto 'Time'">alarm</a>
+                </li>
+                <li>
+                    <a href="#" class="material-symbols-outlined" title="Projeto 'Date'">calendar_month</a>
+                </li>
+                <li>
+                    <a href="#" class="material-symbols-outlined" title="Projeto 'Age'">elderly</a>
+                </li>
+                <li>
+                    <a href="#" class="material-symbols-outlined" id="btn_tema" title="Modo Noturno">sunny</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="traduzir">
+            <h1>Eu sou Deus!</h1>
+            <h2>Autor: Uma Brisa na História</h2>
+            <article id="capitulo">
+                <div id="top_cap">
+                    <div id="langbtn"><span id="br">Português</span><span id="ch">简体</span></div>
+                    <div id="fontsize">
+                        <span id="fontmin">-</span>
+                        <span id="fonttam">16px</span>
+                        <span id="fontmax">+</span>
+                    </div>
+                </div>
+                <h3>Capítulo 448: <i>Cidade Rocha Negra e o Reino da Reflexão</i></h3>
+                <p id="para1">Uma imponente coluna de fumaça, obscurecendo o céu, irrompeu do vulcão de lava, conectando o céu e a terra.</p>
+                <p id="para2">A Cidade Rocha Negra ficava aos pés do vulcão.</p>
+                <p id="para3">Envolta por densa fumaça negra, o estilo geral da cidade diferia um pouco das outras cidades do Clã Trifoliado. O metal era amplamente utilizado em sua construção.</p>
+                <div id="busoriginal">
+                    <a href="#">Por favor, acesse o site original para continuar.</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="../script/tema.js"></script>
+    <script>
+        var lang = 'br'
+
+        document.querySelector('#br').addEventListener('click', mudarlangbr)
+        document.querySelector('#ch').addEventListener('click', mudarlangch)
+
+        function mudarlangbr() {
+            if (lang == 'ch') {
+                lang = 'br'
+                document.querySelector('span#br').style.background = 'var(--color-5)'
+                document.querySelector('span#ch').style.background = 'var(--color-6)'
+                // title
+                document.querySelector('.traduzir > h1').innerHTML = 'Eu sou Deus!'
+                document.querySelector('.traduzir > h2').innerHTML = 'Autor: Uma Brisa na História'
+                document.querySelector('#capitulo > h3').innerHTML = 'Capítulo 448: <i>Cidade Rocha Negra e o Reino da Reflexão</i>'
+                document.querySelector('#capitulo > #para1').innerHTML = 'Uma imponente coluna de fumaça, obscurecendo o céu, irrompeu do vulcão de lava, conectando o céu e a terra.'
+                document.querySelector('#capitulo > #para2').innerHTML = 'A Cidade Rocha Negra ficava aos pés do vulcão.'
+                document.querySelector('#capitulo > #para3').innerHTML = 'Envolta por densa fumaça negra, o estilo geral da cidade diferia um pouco das outras cidades do Clã Trifoliado. O metal era amplamente utilizado em sua construção.'
+                document.querySelector('#busoriginal > a').innerHTML = 'Por favor, acesse o site original para continuar.'
+            }
+        }
+
+        function mudarlangch() {
+            if (lang == 'br') {
+                lang = 'ch'
+                document.querySelector('span#ch').style.background = 'var(--color-5)'
+                document.querySelector('span#br').style.background = 'var(--color-6)'
+                // title
+                document.querySelector('.traduzir > h1').innerHTML = '我就是神！'
+                document.querySelector('.traduzir > h2').innerHTML = '作者：历史里吹吹风'
+                document.querySelector('#capitulo > h3').innerHTML = '第448章 <i>黑岩城和倒影界</i>'
+                document.querySelector('#capitulo > #para1').innerHTML = '遮天蔽日的烟柱从熔岩火山喷涌而出，连接天地。'
+                document.querySelector('#capitulo > #para2').innerHTML = '而黑岩城位于熔岩火山的脚下。'
+                document.querySelector('#capitulo > #para3').innerHTML = '这座城市背靠着滚滚黑烟，整体风格和其他的三叶人的城市也有着些许不同，这座城市大量地使用金属来建造各种设施。'
+                document.querySelector('#busoriginal > a').innerHTML = '请前往原网站继续操作。'
+            }
+        }
+    </script>
+</body>
+</html>

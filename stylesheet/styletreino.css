@@ -2,15 +2,273 @@
 
 .treino {
     padding: 24px;
-    text-align: center;
 }
 
 .treino > h1 {
-    color: blueviolet;
+    color: var(--color-3);
     font-style: italic;
 }
 
-.treino > p {
-    color: rgb(57, 1, 109);
+/* Calculadora */
+
+#iniciarDomArt {
+    margin: 24px 0px;
+    padding: 10px;
+    background-color: var(--color-1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#iniciarDomArt #buttom_div{
+    width: 320px;
+    margin: 8px 0px;
+    padding: 10px;
+    text-align: center;
     font-weight: bold;
+    color: var(--color-1);
+    border-radius: 10px;
+    background-color: var(--color-5);
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+#iniciarDomArt #buttom_div:hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+#iniciarDomArt #buttom_div:active {
+    background-color: var(--color-6);
+}
+
+.treino > #iniciarDomArt > p {
+    margin: 4px 0px 12px 0px;
+    color: var(--color-3);
+    font-weight: bold;
+}
+
+#iniciarDomArt input[type="number"] {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--color-1);
+    color: var(--color-3);
+    width: 260px;
+    padding: 4px 8px;
+    margin-bottom: 10px;
+    outline: 2px solid var(--color-5);
+    border: none;
+    border-left: 16px solid var(--color-5);
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#iniciarDomArt input[type="number"]::-webkit-outer-spin-button,
+#iniciarDomArt input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#iniciarDomArt .conteiner {
+    margin: 8px 0px;
+    display: flex;
+}
+
+#iniciarDomArt .conteiner input[type="radio"] {
+    margin: 6px;
+}
+
+#iniciarDomArt .conteiner input[type="radio"]:checked {
+    accent-color: var(--color-5);
+}
+
+#iniciarDomArt .conteiner label{
+    font-weight: bold;
+}
+
+.calopform {
+    margin: 0px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Treino 3 */
+
+.traduzir {
+    padding: 24px;
+}
+
+.traduzir > h1 {
+    font-size: 40px;
+}
+
+.traduzir > h2 {
+    font-size: 16px;
+}
+
+.traduzir #capitulo {
+    border-radius: 8px;
+    margin: 16px 0px;
+    background-color: var(--color-1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.traduzir #top_cap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.traduzir #top_cap #fontsize{
+    background-color: var(--color-2);
+    border: 2px solid var(--color-4);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: translate(-8px, 4px);
+}
+
+.traduzir #top_cap #fontmin, .traduzir #top_cap #fontmax{
+    width: 24px;
+    background-color: var(--color-3);
+    color: var(--color-1);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.traduzir #top_cap #fonttam{
+    background-color: var(--color-2);
+    color: var(--color-4);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0px 4px;
+}
+
+.traduzir #capitulo #langbtn {
+    display: flex;
+    border-bottom-right-radius: 12px;
+    width: 230px;
+    overflow: hidden;
+}
+
+.traduzir #capitulo #langbtn > span {
+    width: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: var(--color-6);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.traduzir #capitulo #langbtn > #br {
+    border-right: 1px solid var(--color-1);
+    background-color: var(--color-5);
+}
+.traduzir #capitulo #langbtn > #ch {
+    border-left: 1px solid var(--color-1);
+}
+
+.traduzir > #capitulo > h3 {
+    margin: 16px 0px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.traduzir > #capitulo > p {
+    font-size: 16px;
+    text-indent: 32px;
+    margin: 0px 24px;
+    margin-bottom: 16px;
+    line-height: 20px;
+}
+
+.traduzir > #capitulo > #busoriginal {
+    box-shadow: 0px -7px 8px 0px #0000002b;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-color: var(--color-5);
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.traduzir > #capitulo > #busoriginal > a {
+    color: var(--color-1);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Votar - treino 2*/
+
+#idadeart {
+    background-color: var(--color-1);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cond h1{
+    background-color: var(--color-6);
+    color: var(--color-1);
+    padding: 4px 0px;
+    text-align: center;
+}
+
+#iidade {
+    margin-bottom: 16px;
+    padding: 4px 10px;
+    font-size: 16px;
+    border-radius: 32px;
+}
+
+p#btn {
+    background-color: var(--color-5);
+    width: 120px;
+    text-align: center;
+    padding: 4px 0px;
+    margin-bottom: 10px;
+    border-radius: 32px;
+    color: var(--color-1);
+    font-weight: bold;
+}
+
+p#result {
+    margin: 0px;
+    padding: 0px;
+    color: var(--color-1);
+}
+
+hr {
+    border: 1px solid var(--color-5);
+    margin-bottom: 10px;
+    align-self: stretch;
+}
+
+.hora {
+    background-color: var(--color-6);
+    text-align: center;
+    padding: 8px 0px;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+p#msg_hora {
+    color: var(--color-1);
 }

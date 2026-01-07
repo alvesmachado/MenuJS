@@ -20,6 +20,9 @@
                     <a href="../index.html" class="material-symbols-outlined" title="Página Inicial">home</a>
                 </li>
                 <li>
+                    <a href="../calculator.html" class="material-symbols-outlined" title="Página Inicial">calculate</a>
+                </li>
+                <li>
                     <a href="../time.html" class="material-symbols-outlined" title="Projeto 'Time'">alarm</a>
                 </li>
                 <li>
@@ -29,22 +32,62 @@
                     <a href="#" class="material-symbols-outlined" title="Projeto 'Age'">elderly</a>
                 </li>
                 <li>
-                    <a href="#" class="material-symbols-outlined" title="Modo Noturno">sunny</a>
+                    <a href="#" class="material-symbols-outlined" id="btn_tema" title="Modo Noturno">sunny</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="treino">
+        <section class="hora">
+            <p id="msg_hora"></p>
+        </section>
+        <section class="cond">
+            <h1>Treino 2</h1>
+            <article id="idadeart">
+                <input type="number" name="idade" id="iidade" placeholder="Digite sua idade">
+                <p id="btn">Devo votar?</p>
+                <hr>
+                <p id="result">Easter egg</p>
+            </article>
         </section>
     </main>
+    <script src="../script/tema.js"></script>
     <script>
-        // var nome = String(window.prompt("Qual é o seu nome?"))
+
+        var agora = new Date()
+        var horario = agora.getHours()
+        var msgday = document.querySelector('p#msg_hora')
+        if (horario < 12) {
+            msgday.innerHTML = "Bom dia!"
+        } else if (horario <= 18) {
+            msgday.innerHTML = "Boa tarde!" 
+        } else {
+            msgday.innerHTML = "Boa noite!"
+        }
+
+        document.querySelector('#idadeart > p#btn').addEventListener('click', clicar)
+
+        function clicar() {
+            const idade = Number(document.querySelector('input#iidade').value)
+            const resultado = document.querySelector('p#result')
+
+            if (idade < 16) {
+                resultado.innerHTML = `<strong>Você não vota!</strong>`
+            } else if (idade < 18 || idade > 65) {
+                resultado.innerHTML = `<strong>Seu voto é opcional!</strong>`
+            } else {
+                resultado.innerHTML = `<strong>Seu voto é obrigatório!</strong>`
+            }
+            resultado.style.color = 'var(--color-3)'
+        }
+
+
+        /* // var nome = String(window.prompt("Qual é o seu nome?"))
         // var n1 = Number(window.prompt("Digite um número"))
         var robot = String(window.prompt(`Digite "HuMaNo" para provar que você não é um robô: `))
         var nome = "Michael"
         var n1 = 5
-        document.write(`<h1>Olá <strong>${nome}</strong></h1> <p>Uma curiosidade, você sabia que seu nome tem ${nome.length} letras?</p>`)
+        document.write(`<h1>Olhumanoá <strong>${nome}</strong></h1> <p>Uma curiosidade, você sabia que seu nome tem ${nome.length} letras?</p>`)
         document.write(`<p>A conversão de número para dinheiro fica: <strong>${n1.toLocaleString('pt-BR',{style:"currency", currency: 'BRL'})}</strong></p>`)
 
         var n2 = 2
@@ -62,7 +105,7 @@
 
         var robotresult = robot == "HuMaNo" ? 'Você não é um robô!' : 'Você é um robô!' // Ternarios: (Aqui fica a operação que deve ser true ou false) ? (Aqui fica o que é salvo se for true) : (aqui fica o false)
 
-        document.write(`<h2><strong>${robotresult}</strong></h2>`)
+        document.write(`<h2><strong>${robotresult}</strong></h2>`) */
 
     </script>
 </body>

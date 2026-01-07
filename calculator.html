@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,1,0" />
+    <link rel="stylesheet" href="stylesheet/styletreino.css">
+    <link rel="shortcut icon" href="image/favicon.svg" type="image/x-icon">
+    <title>MenuJS | Calculadora</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html" class="material-symbols-outlined" title="MenuJS">code</a>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="index.html" class="material-symbols-outlined" title="Página Inicial">home</a>
+                </li>
+                <li>
+                    <a href="calculator.html" class="material-symbols-outlined" title="Página Inicial">calculate</a>
+                </li>
+                <li>
+                    <a href="time.html" class="material-symbols-outlined" title="Projeto 'Time'">alarm</a>
+                </li>
+                <li>
+                    <a href="#" class="material-symbols-outlined" title="Projeto 'Date'">calendar_month</a>
+                </li>
+                <li>
+                    <a href="#" class="material-symbols-outlined" title="Projeto 'Age'">elderly</a>
+                </li>
+                <li>
+                    <a href="#" class="material-symbols-outlined" id="btn_tema" title="Modo Noturno">sunny</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="treino">
+            <h1 id="titledom">Calculadora</h1>
+            <article id="iniciarDomArt">
+                <p>Aqui vai o resultado: </p>
+                <p id="msg_result">0</p>
+                <input type="number" name="n1" id="n1" placeholder="Digite seu primeiro número para somar">
+                <input type="number" name="n2" id="n2" placeholder="Digite seu segundo número para somar">
+                <div class="conteiner">
+                    <div class="calopform">
+                        <label for="mult">Adição</label>
+                        <input type="radio" name="caltype" id="adic" checked>
+                    </div>
+                    <div class="calopform">
+                        <label for="mult">Subtração</label>
+                        <input type="radio" name="caltype" id="subt">
+                    </div>
+                    <div class="calopform">
+                        <label for="mult">Multiplicação</label>
+                        <input type="radio" name="caltype" id="mult">
+                    </div>
+                    <div class="calopform">
+                        <label for="mult">Divisão</label>
+                        <input type="radio" name="caltype" id="divi">
+                    </div>
+                </div>
+                <div id="buttom_div">Clique aqui</div>
+            </article>
+        </section>
+    </main>
+    <script src="script/tema.js"></script>
+    <script>
+        document.querySelector('#buttom_div').addEventListener('click', somar)
+        function somar() {
+            var tn1 = Number(document.querySelector('input#n1').value)
+            var tn2 = Number(document.querySelector('input#n2').value)
+            var result = document.querySelector('#msg_result')
+            if (document.querySelector('input#adic:checked')) {
+                var cal =  tn1 + tn2
+                result.innerText = cal
+            }
+            else if (document.querySelector('input#subt:checked')) {
+                var cal =  tn1 - tn2
+                result.innerText = cal
+            }
+            else if (document.querySelector('input#mult:checked')) {
+                var cal =  tn1 * tn2
+                result.innerText = cal
+            }
+            else if (document.querySelector('input#divi:checked')) {
+                var cal = tn2 != 0 ? tn1 / tn2 : 'Error: Division by zero'
+                result.innerText = cal
+            }
+        }
+    </script>
+</body>
+</html>
