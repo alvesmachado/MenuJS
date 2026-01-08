@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="stylesheet/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,1,0" />
     <link rel="shortcut icon" href="image/favicon.svg" type="image/x-icon">
-    <title>MenuJS | Todos os projetos de JavaScript aqui!</title>
+    <title>MenuJS | Projeto "Time"</title>
 </head>
 <body>
     <header>
@@ -36,42 +36,27 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="homejavascript">
-            <article class="gridtop">
-                <h2><a href="calculator.html">Projeto Calculadora</a></h2>
-                <h3>Por <a href="#">Michael Douglas</a></h3>
-                <p>Projeto iniciado na aula 10 no <a href="#">Curso em Video</a> no dia 06/01/2026 e melhorado por <a href="#">Michael Douglas</a>.</p>
+    <main id="main_projeto">
+        <section id="projeto">
+            <h1>Verificador de pessoa</h1>
+            <article>
+                <div class="inputDiv">
+                    <input type="number" name="ano" id="iano">
+                    <label for="iano">Ano</label>
+                </div>
+                <div class="inputDiv">
+                    <input type="radio" name="gender" id="imasc" checked>
+                    <label for="iano">Masculino</label>
+                    <input type="radio" name="gender" id="ifemi">
+                    <label for="iano">Feminino</label>
+                </div>
+                <p id="pessoaResult">A pessoa é um homem de 22 anos</p>
+                <span id="genderBtn">Clique aqui para resultado</span>
             </article>
-            <article class="gridleft">
-                <h2><a href="time.html">Projeto Time</a></h2>
-                <h3>Por <a href="#">Michael Douglas</a></h3>
-            </article>
-            <article class="gridright">
-                <h2><a href="gender.html">Projeto Age</a></h2>
-                <h3>Por <a href="#">Michael Douglas</a></h3>
-            </article>
-        </section>
-        <section id="homejavascript2">
-            <h1>Treinos</h1>
-            <article id="hometreino1">
-                <h2><a href="treino/treino1.html">Treino 1</a></h2>
-                <h3>Por <a href="#">Michael Douglas</a></h3>
-            </article>
-            <article id="hometreino2">
-                <h2><a href="treino/treino2.html">Treino 2</a></h2>
-                <h3>Por <a href="#">Michael Douglas</a></h3>
-            </article>
-            <article id="hometreino3">
-                <h2><a href="treino/treino3.html">Treino 3</a></h2>
-                <h3>Por <a href="#">Michael Douglas</a></h3>
-            </article>
-            <article id="hometreino4">
-                <h2><a href="treino/treino3.html">Treino 4</a></h2>
-                <h3>Por <a href="#">Michael Douglas</a></h3>
-            </article>
+            <h3>@alvesmachado</h3>
         </section>
     </main>
     <script src="script/tema.js"></script>
+    <script src="script/gender.js"></script>
 </body>
 </html>

@@ -24,6 +24,7 @@
     padding: 0px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: var(--color-3);
+    box-sizing: border-box;
 }
 
 html, body {
@@ -215,6 +216,136 @@ main {
     grid-row: 2 / 3;
 }
 
+/* Timer */
+
+#main_projeto {
+    height: calc(100% - 44px);
+    width: 100%;
+}
+
+#projeto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#projeto #horamsg {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+#projeto article {
+    margin: 24px;
+    background-color: var(--color-1);
+    border-radius: 16px;
+    padding: 24px;
+    height: 600px;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+
+#projeto #imagehora {
+    max-width: 420px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#projeto h3 {
+    margin-top: 16px;
+}
+
+/* gender */
+
+.inputDiv {
+    display: flex;
+    align-items: center;
+    margin: 6px;
+}
+.inputDiv input[type= 'number'] {
+    padding: 2px 0px;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+    border: none;
+    outline: 2px solid var(--color-5);
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.inputDiv input[type= 'number'] + label{
+    color: var(--color-1);
+    background-color: var(--color-5);
+    font-weight: bold;
+    font-style: italic;
+    padding: 6px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+
+}
+
+.inputDiv input[type= 'radio'] {
+    accent-color: var(--color-6);
+    margin: 0px 8px;
+}
+
+.inputDiv input[type=number]::-webkit-outer-spin-button,
+.inputDiv input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#pessoaResult {
+    font-size: 20px;
+    margin-top: 8px;
+    font-weight: bold;
+
+}
+
+
+#genderBtn {
+    background-color: var(--color-1);
+    padding: 6px 16px;
+    margin-top: 20px;
+    border-radius: 32px;
+    border: 3px solid var(--color-5);
+    color: var(--color-5);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+#genderBtn:hover {
+    transform: translateY(-6px);
+}
+
+#genderBtn:active{
+    text-decoration: underline;
+}
+
+body.masc {
+    --color-5: rgb(0, 42, 230);
+    --color-6: rgb(0, 30, 163);
+}
+
+body.femi {
+    --color-5: rgb(230, 0, 127);
+    --color-6: rgb(163, 0, 128);
+}
+/* media do home */
 
 @media screen and (min-width: 800px) {
     #homejavascript {
