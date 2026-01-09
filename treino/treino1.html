@@ -38,21 +38,31 @@
         </nav>
     </header>
     <main>
-        <section class="treino">
-            <h1>Olá Mundo!</h1>
-            <p>Maldição OFF</p>
+        <section id="finalizaCompra">
+            <h1>Meu carrinho</h1>
+            <article class="container">
+                <div id="inputCompra">
+                    <label for="ivalor">Valor total</label>
+                    <input type="number" name="valor" id="ivalor" placeholder="Escreva somente o número...">
+                </div>
+                <div id="resultCompra">
+                    <h2>Resumo da compra</h2>
+                    <span class="resultLabel">Saldo JS</span>
+                    <span id="saldoJS">0,00</span>
+
+                    <span class="resultLabel">Preço</span>
+                    <span id="precoComprado">0,00</span>
+
+                    <hr>
+
+                    <span class="resultLabel">Saldo Final</span>
+                    <span id="subtotalFinal">0,00</span>
+                    <span id="btnCompra">Finalizar compra</span>
+                </div>
+            </article>
         </section>
     </main>
     <script src="../script/tema.js"></script>
-    <script>
-        var nome = window.prompt("Qual seu nome?") // Abre a mensagem acima do navegador fazendo uma pergunta com um input
-        var nasc = window.prompt("Qual o seu ano de nascimento") 
-        nome.toUpperCase
-        window.alert(`Seu username atual é ${nome}${nasc}`) // '+' aqui é uma concatenação, mas o alert é uma mensagem com botão 'ok'
-        var n1 = Number(window.prompt("Digite um número")) // Number vale como Number.parseInt ou Number.parseFloat
-        var n2 = Number(window.prompt("Digite outro numero"))
-        var result = n1 + n2
-        window.alert(`${nome}${nasc}, a soma dos valores é ${String(result)}`) // number pode ser transformado em string também com o String(x).
-    </script>
+    <script src="../script/saldo.js"></script>
 </body>
 </html>
