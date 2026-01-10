@@ -17,14 +17,14 @@ function contar() {
         if (fim < inicio) {
             while (contagem >= fim) {
                 var novoSpan = document.createElement('span')
-                novoSpan.innerHTML = (fim <= contagem - passo) ? `${contagem} Passo ` : `${contagem} Fim`
+                novoSpan.innerHTML = (fim <= contagem - passo) ? `${contagem} <span class="material-symbols-outlined">arrow_right_alt</span> ` : `${contagem} <span class="material-symbols-outlined">flag</span>`
                 resultado.appendChild(novoSpan)
                 contagem = contagem - passo
             }
         } else {
             while (contagem <= fim) {
                 var novoSpan = document.createElement('span')
-                novoSpan.innerHTML = (contagem <= fim) ? `${contagem} Passo ` : `${contagem} Fim`
+                novoSpan.innerHTML = (contagem + passo <= fim) ? `${contagem} <span class="material-symbols-outlined">arrow_right_alt</span> ` : `${contagem} <span class="material-symbols-outlined">flag</span>`
                 resultado.appendChild(novoSpan)
                 contagem = contagem + passo
             }
