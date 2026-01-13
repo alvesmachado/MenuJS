@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignora | Só umas ideias de treino</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-sizing: border-box;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+        header {
+            background-color: rgb(150, 0, 0);
+            padding: 10px 10px;
+        }
+        #logo h1 {
+            font-weight: 100;
+            color: white;
+            font-size: 40px;
+        }
+        #notice {
+            background-color: rgb(187, 187, 187);
+            padding: 4px 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        #notice h2 {
+            position: relative;
+            color: rgb(24, 24, 24);
+            transform: translateX(calc(-106px));
+            
+        }
+        main {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 24px;
+        }
+        #btnContainer {
+            background-color: rgb(165, 165, 165);
+            padding: 24px;
+            width: 100%;
+            min-height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #btnContainer input{
+            padding: 4px 0px;
+            width: 320px;
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(165, 165, 165);
+            background-color: rgb(150, 0, 0);
+            border: 5px solid rgb(165, 165, 165);
+            outline: 5px solid rgb(150, 0, 0);
+            border-radius: 32px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <h1>IGNORA</h1>
+        </div>
+    </header>
+    <div id="notice">
+        <h2>Boa noite</h2>
+    </div>
+    <main>
+        <div id="btnContainer">
+            <input type="button" value="Mudar">
+        </div>
+    </main>
+    <script>
+        let btn = document.querySelector('#btnContainer > input')
+        let posi = 0
+        btn.addEventListener('click', mudar)
+        function mudar() {
+            let info = document.querySelector('#notice h2')
+            if (posi == 0) {
+                info.style.transition = ' transform 5s linear'
+                info.style.transform = 'translateX(100vw)'
+                info.style.color = 'rgb(24, 24, 24)'
+                posi = 1
+                console.log(posi)
+            } else {
+                info.style.transition = 'none'
+                info.style.transform = 'translateX(-100%)'
+                posi = 0
+                console.log(posi)
+            }
+        }
+    </script>
+</body>
+</html>
